@@ -1,5 +1,8 @@
 %html
-  %center
-    %h1= @string
-    %form{:method => "post", :action => "toggle"}
-      %input{:type => "submit", :value => "#{@button_string}" }
+  %head
+    %link{:rel => "stylesheet", :type => "text/css", :href => "stylesheet.css"}
+  %body
+    %center
+      %h1= @string
+      %form{:method => "post", :action => "toggle"}
+        %input{:type => "submit", :value => "#{@button_string}" }

@@ -3,6 +3,10 @@ require 'sinatra'
 
 $in_lab = false
 
+get '/stylesheet.css' do
+  sass :stylesheet
+end
+
 get '/' do
   if $in_lab
     @string = "Robots have taken over the lab, find somewhere else to study"
