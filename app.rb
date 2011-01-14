@@ -1,10 +1,10 @@
 require 'rubygems'
 require 'sinatra'
 
-@in_lab = false
+$in_lab = false
 
 get '/' do
-  if @in_lab
+  if $in_lab
     @string = "Robots have taken over the lab, find somewhere else to study"
     @button_string = "The freshman have left, enjoy the labs while you can"
   else
@@ -16,7 +16,7 @@ get '/' do
 end
 
 post '/toggle' do
-  @in_lab = !@in_lab
+  $in_lab = !$in_lab
 
   redirect '/'
 end
