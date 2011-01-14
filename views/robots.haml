@@ -1,4 +1,4 @@
 %html
-  %h1=@string
+  %h1= @string
   %form{:method => "post", :action => "toggle"}
-    %input{:type => "submit", :value => "Toggle Value"}
+    %input{:type => "submit", :value => "#{@button_string}" }

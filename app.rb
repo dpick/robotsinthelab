@@ -4,8 +4,13 @@ require 'sinatra'
 $in_lab = false
 
 get '/' do
-  @string = "Robots have taken over the lab, find somewhere else to study"if $in_lab
-  @string = "The lab is robot free, enjoy the docks in peace" if not $in_lab
+  if $in_lab
+    @string = "Robots have taken over the lab, find somewhere else to study"
+    @button_string = "The freshman have left, enjoy the labs while you can"
+  else
+    @string = "The lab is robot free, enjoy the docks in peace"
+    @button_string = "The freshman are back, to the library!"
+  end
 
   haml :robots
 end
