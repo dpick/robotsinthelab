@@ -10,10 +10,10 @@ end
 get '/' do
   if $in_lab
     @string = "Robots have taken over the lab, find somewhere else to study"
-    @button_string = "The freshman have left, enjoy the labs while you can"
+    @button_string = "The freshmen have left, enjoy the labs while you can"
   else
     @string = "The lab is robot free, enjoy the docks in peace"
-    @button_string = "The freshman are back, to the library!"
+    @button_string = "The freshmen are back, to the library!"
   end
 
   haml :robots
